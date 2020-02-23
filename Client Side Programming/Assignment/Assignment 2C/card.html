@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body
+        {
+            background-color: rgb(182, 178, 187);
+            margin-left: 50px;
+        }
+        .cards
+        {
+            float: left;
+            border: 10px;
+        }
+        #pokerHand
+        {
+            clear: both;
+            font-size: 80px;
+        }
+        .top
+        {
+            clear: both;
+            height: 400px;
+            text-align: center;
+            
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div id="image1" class="cards"></div>
+        <div id="image2" class="cards"></div>
+        <div id="image3" class="cards"></div>
+        <div id="image4" class="cards"></div>
+        <div id="image5" class="cards"></div>
+    </div>
+    
+
+    <div id="pokerHand">
+    </div>
+    <br>
+    <button onClick="window.location.reload();">Refresh Page</button>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+    </script>
+    <script src="card.js"></script>
+</body>
+</html>

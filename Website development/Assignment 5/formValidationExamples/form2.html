@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trivial HTML5 Form Validation</title>
+    <style>
+        input:invalid 
+        {
+            border: 2px dashed red;
+        }
+
+        input:valid 
+        {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!---- FIELD IS REQUIRED WITH VALIDATION CSS---->
+    <form>
+        <label for="choose">Would you prefer a banana or cherry?</label>
+        <input id="choose" name="i_like" required>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

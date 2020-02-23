@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 4
+
+   Park City Gazette Style Sheet
+   Author: Ibad Khan
+   Date: 28 Oct 2019  
+
+   Filename: pcg_paper.css
+   Supporting Files: 
+
+*/
+
+/* Font style */
+@font-face
+{
+   font-family:dobkin;
+   src:url(DobkinPlain.ttf);
+}
+
+@font-face{
+	font-family: CAC Champagne;
+	src: url(cac_champagne.woff);
+}
+
+
+.item1 { grid-area: nav; }
+.item2 { grid-area: header; }
+.item3 { grid-area: menu; }
+.item4 { grid-area: main; }
+.item5 { grid-area: right; }
+.item6 { grid-area: stories;}
+.item7 { grid-area: footer;}
+
+body {
+   margin: 0 auto;
+	width: 100%;
+	max-width:960px;
+	min-width: 640px;
+   display: grid;
+   grid-template:
+   'nav nav nav nav nav nav'
+   'header header header header header header'
+   'menu main main main main right'
+   'stories stories stories stories stories stories'
+   'footer footer footer footer footer footer';
+  background-color: rgb(253, 224, 144);
+}
+
+body > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  
+}
+
+
+.item1
+{
+   grid-column: 1/ span 6;
+}
+.item2
+{
+   grid-column:1/ span 6;
+}
+
+
+/* Navbar design */
+.item1 > nav
+{
+   background-color: rgb(211, 179, 37);
+   /* position: fixed; */
+}
+.item1 > nav > ul {
+	display: table-row;
+   list-style-type: none;
+   
+	
+}
+
+.item1 > nav > ul > li {
+	display: inline;
+	text-align: center;
+	
+}
+
+.item1 > nav a {
+	display: block;
+	float:left;
+	text-align:center;
+	text-decoration: none;
+	padding:14px 16px;
+	color:rgb(229, 224, 233);
+   font-size: 20px;
+   height:15px;
+   }
+.item1>nav>ul>li a:hover
+{
+   background-color: rgb(224, 126, 34);
+   position: relative;
+   
+}
+.item2 img
+{
+   
+   width: 100%;
+   display: block;
+   margin: 0;
+   height: 161px;;
+   
+   
+}
+
+/* Background setting */
+   .item3
+   {
+      position: static;
+      background-image:linear-gradient(#d64374,rgb(162, 162, 206));
+   }
+   .item4
+   {  
+      background-color:rgb(202, 230, 201);
+      background-image: url("images (1).jpg");
+      padding: 30px;
+      font-family: CAC Champagne;
+      font-size: 30px;
+      text-align: justify;
+      position: relative;
+   }
+
+   .item5
+   {
+      background-color:rgb(193, 187, 212);
+      padding: 20px;
+      background-image:linear-gradient(rgb(170, 149, 149),rgb(194, 118, 4));
+   }
+   .item6
+   {
+      background-color:rgb(161, 67, 67);
+      padding: 20px;
+      text-align: justify;
+   }
+
+   .item6 > nav > ul {
+      display: table-row;
+      list-style-type: none;
+      
+      
+   }
+   
+   .item6 > nav > ul > li {
+      display: inline;
+      text-align: center;
+      
+   }
+   
+   .item6 > nav a {
+      display: block;
+      float:left;
+      text-align:center;
+      text-decoration: none;
+      padding:14px 16px;
+      color:rgb(229, 224, 233);
+      font-size: 15px;
+      
+   }
+   .item7
+   {
+      background-color: rgb(223, 89, 56);
+      text-align: center;
+      position: relative;
+      height: 100px;
+      border: 15px solid rgb(46, 53, 46);
+      padding: 20px;
+   }
+
+  
+
+
+   .item5 ul{
+      list-style-type:none;
+      text-align: left;
+   }
+   
+   .item5 ul>li>a{
+      text-decoration:none;
+      color:black;
+      font-family:dobkin;
+      font-size: 25px;
+   }
+   .item3 ul{
+      /* list-style-type:none; */
+      text-align: left;
+   }
+   
+   .item3 ul>li>a{
+      text-decoration:none;
+      color:blanchedalmond;
+      font-style: oblique;
+   }
+
+
+
+/* Footer Design */
+    #services
+    {
+      
+      float: left;
+      text-align: left;
+      width: 214px;
+   }
+   #policy
+    {
+      float:left;
+      text-align: left;
+      width: 214px;
+      
+   }
+    #address
+   {
+      float:left;
+      text-align: left;
+      width: 214px;
+
+   }
+   
+ 
+  .item3>h2 
+  {
+     text-align: left;
+     padding-left: 5px;
+  }
+
+  #storylist
+  {
+     background-color: burlywood;
+     padding:10px;
+     font-weight: bold;
+
+  }
+  .item6 img
+  {
+     float: right;
+     margin: 0px 10px 10px 100px;
+     width: 200px;
+     height: 200px;
+  }
+  .item6> p
+  {
+   background-color: darkgrey;
+   padding:15px;
+   border-radius: 10px;
+   background-image: url("images.jpg");
+  }

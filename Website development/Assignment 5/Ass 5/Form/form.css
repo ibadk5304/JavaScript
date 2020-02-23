@@ -1,0 +1,67 @@
+
+body
+{
+    margin: 0 auto;
+    width: 100%;
+    max-width:960px;
+    min-width: 640px;
+    background-color:bisque;
+}
+#header
+{
+    width:100%;
+    height: 100px; 
+    margin:0;
+    background-color: rgb(92, 92, 236);
+    color: white;
+    text-align: center;
+}
+#form
+{
+    max-width:960px;
+    min-width: 640px;
+    background-color:rgb(231, 180, 180);
+    padding: 5px;
+}
+#table
+{
+    
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: rgb(241, 186, 186);
+    margin: 20px;
+    width: 100%
+    
+}
+#pagebreak
+{
+    height: 5px;
+    background-color: rgb(151, 151, 182);
+}
+/* .language
+{
+    clear: both;
+    width: 100%;
+    position: absolute;
+}
+.english
+{
+    float: left;
+    text-align: left;
+    margin: 20px;
+
+    width: 500px;
+}
+.citizen
+{
+    float:left;
+    text-align: left;
+    margin: 40px;
+}
+.program
+{
+    clear: both;
+    position: absolute;
+
+} */

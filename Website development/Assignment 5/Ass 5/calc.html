@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cool Calc</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+#body
+{
+	margin: 0 auto;
+	min-width: 640px;
+	max-width: 960px;
+
+}
+#display
+{
+	background-color: black;
+	color: #53f442;
+	font-face: courier;
+	font-size:40px;
+	width: 500px;
+	height: 65px;
+	margin-bottom: 10px;
+}
+.btn{
+	height: 50px;
+	width: 120px;
+}
+
+
+table{
+	background-color: aquamarine;
+	width: 500px;
+}
+</style>
+</head>
+<body>
+
+	<div id="display"></div>
+	<table>
+		<tr>
+			<td><div class="btn btn-primary" id="num1">1</div></td>
+			<td><div class="btn btn-primary" id="num2">2</div></td>
+			<td><div class="btn btn-primary" id="num3">3</div></td>
+			<td><div class="btn btn-primary" id="plus">+</div></td>
+		</tr>
+		<tr>
+			<td><div class="btn btn-primary" id="num4">4</div></td>
+			<td><div class="btn btn-primary" id="num5">5</div></td>
+			<td><div class="btn btn-primary" id="num6">6</div></td>
+			<td><div class="btn btn-primary" id="minus">-</div></td>
+		</tr>
+		<tr>
+			<td><div class="btn btn-primary" id="num7">7</div></td>
+			<td><div class="btn btn-primary" id="num8">8</div></td>
+			<td><div class="btn btn-primary" id="num9">9</div></td>
+			<td><div class="btn btn-primary" id="multiply">*</div></td>
+		</tr>
+		<tr>
+			<td><div class="btn btn-primary" id="ac">AC</div></td>
+			<td><div class="btn btn-primary" id="num0">0</div></td>
+			<td><div class="btn btn-primary" id="equals">=</div></td>
+			<td><div class="btn btn-primary" id="divide">/</div></td>
+		</tr>
+	</table>
+
+	<script>
+	let currentCalc = "";
+	let num_btn1 = document.querySelector("#num1");
+	let num_btn2 = document.querySelector("#num2");
+	let num_btn3 = document.querySelector("#num3");
+	let num_btn4 = document.querySelector("#num4");
+	let num_btn5 = document.querySelector("#num5");
+	let num_btn6 = document.querySelector("#num6");
+	let num_btn7 = document.querySelector("#num7");
+	let num_btn8 = document.querySelector("#num8");
+	let num_btn9 = document.querySelector("#num9");
+	let num_btn0 = document.querySelector("#num0");
+	
+	let clear_btn = document.querySelector("#ac");
+	let plus_btn = document.querySelector("#plus");
+	let minus_btn = document.querySelector("#minus");
+	let multiply_btn = document.querySelector("#multiply");
+	let divide_btn = document.querySelector("#divide");
+
+	let equals_btn = document.querySelector("#equals");
+
+
+	num_btn1.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+	num_btn2.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+	num_btn3.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+	num_btn4.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+	num_btn5.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+	num_btn6.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+	num_btn7.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+
+	num_btn8.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+	num_btn9.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+	num_btn0.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		let disp = document.querySelector("#display");
+		disp.textContent = currentCalc;
+	});
+
+
+	plus_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		console.log(currentCalc);
+	});
+
+	minus_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		console.log(currentCalc);
+	});
+
+	multiply_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		console.log(currentCalc);
+	});
+
+	divide_btn.addEventListener("click",
+	function (e)
+	{
+		currentCalc = currentCalc + e.target.textContent;
+		console.log(currentCalc);
+	});
+
+	equals_btn.addEventListener("click",
+	function (e)
+	{
+		let disp = document.querySelector("#display");
+		disp.textContent = eval(currentCalc);
+		currentCalc = "";
+	});
+
+	clear_btn.addEventListener("click",
+	function(e)
+	{
+		let disp = document.querySelector("#display");
+		disp.textContent = "";
+		currentCalc= "";
+	});
+
+
+
+</script>
+</html>

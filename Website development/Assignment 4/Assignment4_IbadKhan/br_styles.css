@@ -1,0 +1,234 @@
+/* Author: Ibad Khan
+   Date: 12 nov 2019
+   Filename: br_listing2048.htmls
+   Supporting Files:  */
+
+
+   * {
+   box-sizing: border-box;
+ }
+ 
+ /* Style the body */
+ body {
+   font-family: Arial;
+   margin: 0px;
+   background-color: rgb(177, 143, 241);
+
+   margin: 0 auto;
+	width: 100%;
+ }
+ 
+ /* Header/logo Title */
+ .header {
+   padding: 20px;
+   text-align: center;
+   background-image: linear-gradient(rgba(255,0,0,0), rgba(255,0,0,1));
+   color: white;
+   width: 100%;
+ }
+
+ .imgHeader
+ {
+  justify-content: center; 
+ }
+ .imgHeader img
+ {
+   width:100%;
+   height: auto;
+ }
+ 
+ /* Style the top navigation bar */
+ .navbar {
+   display: flex;
+   background-color: #333;
+ }
+ 
+ /* Style the navigation bar links */
+ .navbar a {
+   color: white;
+   padding: 14px 20px;
+   text-decoration: none;
+   text-align: center;
+ }
+ 
+ /* Change color on hover */
+ .navbar a:hover {
+   background-color: #ddd;
+   color: black;
+ }
+
+ /* Row 1 */
+ .row1
+ {
+   display:flex;
+   flex:wrap;
+ }
+ .detail
+ {
+    flex: 40%;
+    background-color:rgb(247, 214, 214);
+    border-width: 10px;
+    padding: 20px;
+ }
+ .detail p 
+ {    
+   /* Text Shadow  */
+  text-shadow:5px 5px 5px red;       
+  font-style:oblique;
+ }
+
+ .price
+ {
+   height:200px;
+   width:200px;
+   padding:20px;
+   margin-left: 70px;
+   margin-top: 100px;
+    /* box shadow */
+   box-shadow: 15px 10px 122px blue;;
+   background-color: aliceblue;
+ }
+ .frontview
+ {
+   flex:60%; 
+   padding: 60px;
+   text-align: center;
+
+   background-image: radial-gradient(red, rgb(128, 0, 60), rgb(230, 215, 169));
+ }
+ 
+ .img
+ {
+  justify-content: center;
+
+ }
+ .img img
+ {
+   width:100%;
+   height:auto;
+ }
+ /* Filter property Used */
+ .frontview img
+ {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+
+  /* Transform property */
+  -ms-transform: skewY(5deg);
+  -webkit-transform: skewY(10deg); 
+  transform: rotate(-10deg);
+  
+  border-radius: 22px; 
+  width: 450px; 
+  height: 250px;
+ }
+ /* Row 2 container */
+ .row2 
+ {  
+   display: flex;
+   flex-wrap: wrap;
+ }
+ 
+ /* Create two unequal columns that sits next to each other */
+ /* Sidebar/left column */
+ .side 
+ {
+   flex: 15%;
+   background-color: #e92424;
+   padding: 1px;
+ }
+
+ /* Pull down menu */
+ .dropbtn {
+  background-color: rgb(104, 123, 230);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width:100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  width:100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  width:100%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:rgb(11, 219, 185);}
+ 
+ /* Main column */
+ .main 
+ {
+   flex: 85%;
+   background-color: white;
+   padding: 20px;
+ }
+
+ /* Image Gallery */
+ 
+ #imageslide
+  {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   background-image: url("br_paper.png");
+  }
+  .gallery {
+   margin: 5px;
+   border: 1px solid #ccc;
+   float: left;
+   width: 380px;
+ }
+ 
+ div.gallery:hover {
+   border: 1px solid #777;
+ }
+ 
+ div.gallery img {
+   width: 100%;
+   height: auto;
+ }
+ 
+ div.desc {
+   padding: 15px;
+   text-align: center;
+ }
+ 
+ /* Footer */
+ .footer
+{
+   padding: 20px;
+   text-align: center;
+   background: #ddd;
+ }
+ 
+ /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 700px) 
+ {
+    .row1,.row2, .navbar
+   {   
+    flex-direction: column;
+   }
+ }
+
+ 

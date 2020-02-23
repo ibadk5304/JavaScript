@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <link href="form.css" rel="stylesheet">
+    
+<body>
+    <div id="form">
+        <header id="header">
+            <h1>Nova Scotia community college program application</h1>
+        </header>
+        <form onsubmit="return letterValidate()" name="form">
+                <table id="table">
+                    <tr>
+                        <td colspan="4">
+                            <label for="fullName">Personal Information</label>
+                            <input id="fullname" name="fullName" type="text" maxlength="30" style="width: 700px;" onchange="allLetter(document.form.fullName)" required>
+                            <br> Print Full name
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="fName" type="text" id="firstname" max length="20" onchange="allLetter(document.form.fName)" required>
+                            <br>Prefered First Name
+                        </td>
+                        <td>
+                            <input name="lName" type="text" id="lastname" max length="20" size="40px" onchange="allLetter(document.form.fName)" required>
+                            <br>Previous last name
+                        </td>
+                        <td>
+                            <input name="dateOfBirth" id="dateofbirth" type="text" placeholder="mm/dd/yyyy" onblur = "ValidateDOB()" required>
+                            <br> Date of birth
+                            <br><span class="error" id="lblError"></span>
+                        </td>
+                        <td>
+                            <label for="gender">Gender</label>
+                            <input name="Gender" type="radio" id="male" value="male" required>M
+                            <input name="Gender" type="radio" id="female" value="female" required>F
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="Apartment" type="text" id="Apartment" oninput="allnumeric()" maxlength="10">
+                            <br>Apartment number
+                        </td>
+                        <td colspan="3">
+                            <input name="address" type="text" id="address" maxlength="60" size="98" required>
+                            <br>Permanent mailing address (street address, rural route, or P.O Box)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="city" type="text" id="city" maxlength="20" required>
+                            <br>City/town
+                        </td>
+                        <td>
+                            <input name="province" type="text" id="province" required>
+                            <br>Province
+                        </td>
+                        <td>
+                            <input name="country" type="text" id="country" required>
+                            <br>Country
+                        </td>
+                        <td>
+                            <input name="postalcode" type="text" id="postalcode" required>
+                            <br>Postal code
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="homephone" type="text" id="homephone">
+                            <br>Home telephone
+                        </td>
+                        <td>
+                            <input name="workphone" type="text" id="workphone">
+                            <br>Work telephone
+                        </td>
+                        <td>
+                            <input name="cellphone" type="text" id="cellphone" required>
+                            <br>Cell phone
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input name="emailaddress" type="email" id="email" required>
+                            <br>Email address
+            
+                        </td>
+                        <td colspan="2">
+                            <input name="studentnumber" type="text" id="studentnumber" required>
+                            <br>Student Id number
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="language">
+                                <div class="english">
+                                    <h1>English Language Proficiency</h1>
+                                    <h6>Is english is you first language</h6><br>
+                                    <input name="englishlanguage" type="radio" value="yes" id="languageyes" onclick="otherLanguage()" required>Yes
+                                    <input name="englishlanguage" type="radio" value="no" id="languageno" onclick="otherLanguage()" required>No, my first language is:
+                                    
+                                    <input name="language" type="text" id="language"><br>
+                    
+                                    <h1>Program Choices</h1>
+                                    <p>
+                                        You can apply for one or two program/campus combinations.<br>
+                                        Change or additions to your choices require the submission<br>
+                                        of a new application and fee. Your application will be considered<br>
+                                        for the next in take
+                                    </p>
+                                </div>
+                        </td>
+                        <td colspan="2">
+                            <div class="citizen">
+                                <h1>Citizenship Status</h1>
+                                <input type="radio" name="citizenstatus" value="citizen" id="citizen" class="notother" onclick="countryName()" required>
+                                Canadian Citizen<br>
+                                <input type="radio" name="citizenstatus" value="pr" id="pr" class="notother" onclick="countryName()" required>
+                                Permanent Resident (Copy of Permanent Resident card required)<br>
+                                <input type="radio" name="citizenstatus" value="refugee" id="refugee" class="notother" onclick="countryName()" required>
+                                Refugee with protected person status<br>
+                                <input type="radio" name="citizenstatus" value="other" id="otherCountry" onclick="countryName()" required>
+    
+                                Other (Please specify below)<br>
+                                <input name="address" type="text" id="otherCountryField"><br>
+                                Country of Citizenship (if not Canadian)<br>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input name="choice1" id="choice1" type="text" size="70" maxlength="50" required>
+                            <br>Preferred program cjoice 
+                        </td>
+                        <td colspan="2">
+                            <input name="location1" type="text" maxlength="50" id="location1" required><br>
+                            Location  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input name="choice2" id="choice2" type="text" size="70" required><br>
+                        Second program choice 
+                        </td>
+                        <td colspan="2">
+                            <input name="location2" id="location2" type="text" required><br>
+                        Location
+                    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <h2>Application Fee</h2>
+                            <P>
+                                The non-refundable $25 application fee($75 international,$0 ALP)
+                                <br>
+                                must be recieved in order for your application.Please do not send cash.
+                            </P>
+                            <br>
+                            <input name="Gender" type="radio" value="male" id="gender" required>Visa
+                            <input name="Gender" type="radio" value="male" id="gender" required>Mastercard
+                            <input name="Gender" type="radio" value="male" id="gender" required>Discover
+                            <input name="Gender" type="radio" value="male" id="gender"required>American Express
+                            <input name="Gender" type="radio" value="male" id="gender" required>Cheque/Money Order(payable to NSCC,No post-dated cheques.)
+    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="creditcardnumber" type="number" maxlength="16" minlength="16" required>
+                            <br>Credit Card Number
+                        </td>
+                        <td>
+                            <input name="cardexpirydate" type="number" required>
+                            <br>Exp.Date(mm/yy)
+                        </td>
+                        <td>
+                            <input name="cardname" type="number" required>
+                            <br>Name of Cardholder
+                            <br>(as it appears on the card)
+                        </td>
+                        <td>
+                            <input name="cardsign" type="text" required>
+                            <br>Cardholder's signature
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <h4>For Office use only</h4><br>
+                            <input name="officeuseid" type="number"><br>
+                            ID<br>
+                            <input name="officeusereciept" type="number">
+                            <br>Reciept number
+                            <br>Recieved mm/dd/yy
+                        </td>
+                    </tr>
+                    <div id="pagebreak">
+    
+                    </div>
+                    
+                    <tr>
+                        <td colspan="1">
+                            <h2>Educational History</h2>
+                        </td>
+                        <td colspan="3">
+                            <p>
+                                Please include all educational history, even if the program was not completed.
+                                Applications without complete documentation cannot be processed regardless
+                                of the date of submission of the application. Official transcripts are required.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><h5>High school or GED:</h5><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input name="schoolName1" type="text" size="60" required><br>
+                            Name of school
+                        </td>
+                        <td colspan="1">
+                            <input name="location1" type="text" required><br>
+                            Grade completed
+                        </td>
+                        <td colspan="1">
+                            <input name="location1" type="text"><br>
+                            Date
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><h5><h5>Previous community college, university and/or other education:</h5><br></h5><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                                
+                                <input name="schoolName2" type="text" required><br>
+                                Name of Institution
+                        </td>
+                        <td colspan="1">
+                                <input name="location2" type="text" required><br>
+                                Degree/Diploma
+                        </td>
+                        <td colspan="1">
+                                <input name="location2" type="text" required><br>
+                                Year completed
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td colspan="2">
+                                <input name="location1" type="text"><br>
+                                Name of Institution
+                        </td>
+                        <td colspan="1">
+                                <input name="location1" type="text"><br>
+                                Degree/Diploma
+                        </td>
+                        <td colspan="1">
+                                <input name="location1" type="text"><br>
+                                Year completed
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <h1>
+                                Health & Human<br>
+                                Services Applicants
+                            </h1>
+                        </td>
+                        <td>
+                            Have you been convicted of<br>
+                            a criminal offence for which you<br>
+                            have not received a pardon?<br>
+                            <input name="criminaloffence" type="radio" value="yes" id="criminaloffence" required>Yes
+                            <input name="criminaloffence" type="radio" value="no" id="criminaloffence" required>No
+                        </td>
+                        <td>
+                            Have you been convicted of an<br>
+                            offence or investigated for an activity<br>
+                            resulting in your name being placed<br>
+                            on the Child Abuse Registry?<br>
+                            <input name="childabuse" type="radio" value="yes" id="childabuseyes" required>Yes
+                            <input name="childabuse" type="radio" value="no" id="childabuseno" required>No
+                        </td>
+                        <td>
+                            Have you ever received any<br>
+                            disciplinary actions (including any<br>
+                            revocation of your licence to practise)<br>
+                            as a member of another health and<br>
+                            human service organization?<br>
+                            <input name="humanservice" type="radio" value="yes" id="humanserviceyes" required>Yes
+                            <input name="humanservice" type="radio" value="no" id="humanserviceno" required>No
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <h2>
+                                Self-identification<br>
+                                Questionnaire
+                            </h2>(optional)
+                        </td>
+                        <td colspan="3">
+                            <p>
+                                NSCC is committed to fostering a diverse college culture and community. Completion of all or part of this<br>
+                                section is voluntary. The information collected may be used by staff and faculty to advise you of services.<br>
+                                It will also be used to assist in assessing and improving student services.
+                            </p>
+                        </td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td>
+                                Do you self-identify<br>
+                                as an Aborginal person? <br>
+                                <input name="aborginal" type="radio" value="yes" id="aborginalyes" required>Yes
+                                <input name="aborginal" type="radio" value="no" id="aborginalno" required>No
+    
+                            </td>
+                            <td>
+                                Do you self-identify as a member of<br>
+                                the African Canadian community? <br>
+                                <input name="africancommunity" type="radio" value="yes" id="africancommunityyes" required>Yes
+                                <input name="africancommunity" type="radio" value="no" id="africancommunityno" required>No
+                            </td>
+                            <td>
+                                Do you self-identify as a person<br>
+                                with a disability?<br>
+                                <input name="disability" type="radio" value="yes" id="disabilityyes" required>Yes
+                                <input name="disability" type="radio" value="no" id="disabilityno" required>No
+                            </td>
+                            <td>
+                                If you require accommodation,please<br>
+                                provide documentation of disability:<br>
+                                <input name="disabilitydocument" type="radio" value="enclosed" id="disabilitydocument" required>Enclosed<br>
+                                <input name="disabilitydocument" type="radio" value="I will forward" id="disabilitydocument" required>I will forward it<br>
+                                <input name="disabilitydocument" type="radio" value="on NSCC file" id="disabilitydocument" required>On file with NSCC Admissions
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><h3>Additional information</h3></td>
+                        </tr>
+                            
+        
+                    </table>
+                    
+                    
+                    
+            <center>
+                <button id="process_form">Submit</button>
+            
+            </center>
+        </form>
+        
+
+
+    </div>
+    
+   
+    <script src="form.js"></script>
+</body>
+</html>

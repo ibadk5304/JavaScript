@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>world countries</title>
+    <link rel="stylesheet" type="text/css" href="country.css">
+</head>
+<body>
+    <form>
+        <select id="sel" onchange="DisplayPopulationData(this)">
+            <option value="">-- Select --</option>
+        </select>
+    
+
+        <h1>Country Information:</h1>
+        <div class="left">
+            <div id="flagnamediv">
+                <div id="countryimg"></div>
+                <div id="msg"></div>
+            </div>
+            <div id="populationpercentdiv">
+                <h2>Percentage of world population:</h2>
+                <p id="percentage"></p>
+            </div>
+            
+
+            
+        </div>
+        <div class="right">
+            <div id="rightdiv">
+                <h2>Population:</h2>
+                <p id="populationnumber"></p>
+    
+                <h2>Area in:</h2>
+                <input type="radio" name="area" id="areaMile" onclick="CalculateAreaInMile(this)"> Per square mile<br>
+                <input type="radio" name="area" id="areaKm" onclick="CalculateAreaInKm(this)"> Per square kilometer
+                <p id="area"></p>
+    
+                <h3>Population density</h3>
+                <input type="radio" name="density" id="densityMile" onclick="populationDensityMile(this)"> Per square mile<br>
+                <input type="radio" name="density" id="densityKm" onclick="populationDensityKm(this)"> Per square kilometer
+                <p id="density"></p>
+            </div>
+            
+
+
+        </div>
+        <div id="footer">
+            
+            <a id="wikilink" href="#" target="_blank">WikiCountry</a>
+            <a href="flagQuiz.html">LaunchQuiz</a>
+        </div>
+        
+    </form>
+    
+    <script src="countries.js"></script>
+</body>
+</html>

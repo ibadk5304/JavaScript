@@ -1,0 +1,10 @@
+===== grid responisive design
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_mixed_columns
+===== Port folio layout
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_blog_layout
+=======Responsive to nav
+
+===========background blur image
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_blurred_bg
+============Show references
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_team
