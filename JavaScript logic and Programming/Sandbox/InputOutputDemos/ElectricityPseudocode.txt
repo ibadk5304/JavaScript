@@ -1,8 +1,0 @@
-1.Program start
-2.Set the cost per kilowatt used per hour variable to 11.76 cents
-3. Promt for the wattage of the device 
-4.Promt for the hours the device is used 
-5. Calculate the cost of electricty used by dividing the product of wattage times hour used by the product of 1000
-times cost  per kilowatt hour.
-6. Output the cost of electricity for the device.
-7. Program end

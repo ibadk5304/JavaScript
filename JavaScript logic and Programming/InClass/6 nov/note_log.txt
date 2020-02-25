@@ -1,9 +1,0 @@
-Wed Nov 06 2019 11:57:05 GMT-0400 (Atlantic Standard Time)
-exercise 15
-Wed Nov 06 2019 12:00:49 GMT-0400 (Atlantic Standard Time)
-done
-Wed Nov 06 2019 12:01:46 GMT-0400 (Atlantic Standard Time) fdasfn
-Wed Nov 06 2019 12:01:46 GMT-0400 (Atlantic Standard Time) sdfsg
-Sun Dec 17 1995 03:24:00 GMT-0400 (Atlantic Standard Time) assd
-Invalid Date ibad
-Wed Nov 06 2019 12:11:06 GMT-0400 (Atlantic Standard Time) ibad
